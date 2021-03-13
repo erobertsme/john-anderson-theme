@@ -6,8 +6,68 @@ Author: Keokee
 Author URI: https://keokee.com
 Description: Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush. With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine. Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog.
 Tags: one-column,accessibility-ready,custom-colors,custom-menu,custom-logo,editor-style,featured-images,footer-widgets,block-patterns,rtl-language-support,sticky-post,threaded-comments,translation-ready
-Version: 1.0.1610759579
+Version: 1.0.1610759570
 Updated: 2021-01-16 01:12:59
 
 */
+:root {
+  --branding--logo--max-width: 500px;
+	--branding--logo--max-height: 200px;
+	--branding--logo--max-width-mobile: 192px;
+	--branding--logo--max-height-mobile: 192px;
+}
+.pdf-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 65vw;
+  text-align: center;
+}
+.pdf-container object {
+  height: 90vh;
+  width: 100%;
+}
 
+.pdf-container .button {
+  display: block;
+  margin-bottom: 1em;
+  flex: 0 1 40%;
+}
+
+.site-branding {
+  flex: 1 1 100%;
+}
+
+.site-header {
+  justify-content: center;
+}
+
+.primary-navigation {
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .site-branding {
+    padding-left: 5em;
+  }
+}
+
+.archive-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 5em;
+}
+
+.archive-container > div {
+  flex: 1 1 50%;
+}
+
+.archive-container h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.archive-container .content {
+  padding-right: 2em;
+}
