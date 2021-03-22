@@ -6,15 +6,15 @@ Author: Keokee
 Author URI: https://keokee.com
 Description: Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush. With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine. Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog.
 Tags: one-column,accessibility-ready,custom-colors,custom-menu,custom-logo,editor-style,featured-images,footer-widgets,block-patterns,rtl-language-support,sticky-post,threaded-comments,translation-ready
-Version: 1.0.1610759570
+Version: 1.0.4610759570
 Updated: 2021-01-16 01:12:59
 
 */
 :root {
   --branding--logo--max-width: 500px;
-	--branding--logo--max-height: 200px;
-	--branding--logo--max-width-mobile: 192px;
-	--branding--logo--max-height-mobile: 192px;
+  --branding--logo--max-height: 200px;
+  --branding--logo--max-width-mobile: 192px;
+  --branding--logo--max-height-mobile: 192px;
 }
 .pdf-container {
   display: flex;
@@ -56,7 +56,8 @@ Updated: 2021-01-16 01:12:59
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 5em;
+  margin: auto;
+  max-width: var(--responsive--alignwide-width);
 }
 
 .archive-container > div {
@@ -70,4 +71,12 @@ Updated: 2021-01-16 01:12:59
 
 .archive-container .content {
   padding-right: 2em;
+}
+
+.site-footer {
+  background-color: var(--global--color-black);
+}
+
+.site-footer > .site-info, .site-footer nav {
+  color: var(--global--color-white);
 }

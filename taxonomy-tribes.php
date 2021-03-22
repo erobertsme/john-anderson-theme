@@ -30,9 +30,9 @@ $description = get_the_archive_description();
       <?php while ( have_posts() ) :
         the_post();
 
-        if ( get_post_type() === 'tribe' && get_field('type') === 'Article' ): ?>
-          <?php get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ); ?>
-        <?php endif;
+        if ( get_post_type() === 'tribe' && get_field('type') === 'Article' ):
+          get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
+        endif;
 
       endwhile; ?>
     </div>
@@ -44,9 +44,9 @@ $description = get_the_archive_description();
       <?php while ( have_posts() ) :
         the_post();
 
-        if ( get_post_type() === 'tribe' && get_field('type') === 'Book' ): ?>
-          <?php get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ); ?>
-        <?php endif;
+        if ( get_post_type() === 'tribe' && get_field('type') === 'Book' ):
+          get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
+        endif;
         
       endwhile; ?>
     </div>
