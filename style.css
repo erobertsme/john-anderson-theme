@@ -76,6 +76,10 @@ Updated: 2021-03-22 01:12:59
   margin-top: 2em;
 }
 
+.tax-tribes .page-header h2 {
+  flex: 1 0 100%;
+}
+
 .archive-container {
   display: flex;
   flex-wrap: wrap;

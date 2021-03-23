@@ -32,7 +32,7 @@ function register_tribes() {
     "capability_type" => "post",
     "map_meta_cap" => true,
     "hierarchical" => false,
-    "rewrite" => [ "slug" => "tribe", "with_front" => true ],
+    "rewrite" => [ "slug" => "tribe", "with_front" => false ],
     "query_var" => false,
     "menu_icon" => "dashicons-groups",
     "supports" => [ "title", "editor", "thumbnail", "custom-fields" ],
