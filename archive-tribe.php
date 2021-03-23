@@ -23,37 +23,9 @@ $description = get_the_archive_description();
   <?php endif; ?>
 </header><!-- .page-header -->
 
-<div class="archive-container">
-  <div class="article-list">
-    <h2>Articles</h2>
-    <div class="content">
-      <?php while ( have_posts() ) :
-        the_post();
+<div class="tribes-list">
 
-        if ( get_post_type() === 'tribe' && get_field('type') === 'Article' ):
-          get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
-        endif;
-
-      endwhile; ?>
-    </div>
-  </div>
-
-  <div class="book-list">
-    <h2>Books</h2>
-    <div class="content">
-      <?php while ( have_posts() ) :
-        the_post();
-
-        if ( get_post_type() === 'tribe' && get_field('type') === 'Book' ):
-          get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
-        endif;
-        
-      endwhile; ?>
-  </div>
 </div>
-</div>
-
-	<?php twenty_twenty_one_the_posts_navigation(); ?>
 
 <?php else : ?>
 	<?php get_template_part( 'template-parts/content/content-none' ); ?>

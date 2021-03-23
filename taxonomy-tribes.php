@@ -13,19 +13,23 @@ get_header();
 
 $description = get_the_archive_description();
 ?>
-
+<script>console.log(<?php echo json_encode( get_field('tribe_image', get_queried_object()) ); ?>)</script>
 <?php if ( have_posts() ) : ?>
 
 	<header class="page-header alignwide">
 		<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 		<?php if ( $description ) : ?>
 			<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
+      <?php if ( get_query_var( 'tribe_category' ) ) : ?>
+        <h2><?php echo get_term_by( 'slug', get_query_var('tribe_category'), 'tribe_category' )->name; ?></h2>
+      <?php endif; ?>
+      <img src="<?php echo get_field('tribe_image', get_queried_object()); ?>">
 		<?php endif; ?>
 	</header><!-- .page-header -->
 
 <div class="archive-container">
   <div class="article-list">
-    <h2>Articles</h2>
+    <h4>Articles</h4>
     <div class="content">
       <?php while ( have_posts() ) :
         the_post();
@@ -39,7 +43,7 @@ $description = get_the_archive_description();
   </div>
 
   <div class="book-list">
-    <h2>Books</h2>
+    <h4>Books</h4>
     <div class="content">
       <?php while ( have_posts() ) :
         the_post();

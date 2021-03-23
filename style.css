@@ -6,8 +6,8 @@ Author: Keokee
 Author URI: https://keokee.com
 Description: Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush. With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine. Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog.
 Tags: one-column,accessibility-ready,custom-colors,custom-menu,custom-logo,editor-style,featured-images,footer-widgets,block-patterns,rtl-language-support,sticky-post,threaded-comments,translation-ready
-Version: 1.0.4610759570
-Updated: 2021-01-16 01:12:59
+Version: 1.0.6610759570
+Updated: 2021-03-22 01:12:59
 
 */
 :root {
@@ -16,6 +16,7 @@ Updated: 2021-01-16 01:12:59
   --branding--logo--max-width-mobile: 192px;
   --branding--logo--max-height-mobile: 192px;
 }
+
 .pdf-container {
   display: flex;
   flex-wrap: wrap;
@@ -23,6 +24,7 @@ Updated: 2021-01-16 01:12:59
   min-width: 65vw;
   text-align: center;
 }
+
 .pdf-container object {
   height: 90vh;
   width: 100%;
@@ -52,6 +54,28 @@ Updated: 2021-01-16 01:12:59
   }
 }
 
+.tax-tribes h2 {
+  margin-top: 1em;
+  text-transform: uppercase;
+}
+
+.tax-tribes .page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tax-tribes .page-header h1 {
+  flex: 1 0 100%;
+}
+
+.tax-tribes .page-header img {
+  flex: 0;
+  height: 300px;
+  width: 300px;
+  margin-top: 2em;
+}
+
 .archive-container {
   display: flex;
   flex-wrap: wrap;
@@ -69,6 +93,10 @@ Updated: 2021-01-16 01:12:59
   margin: 0;
 }
 
+.archive-container h4 {
+  font-size: 1.6em;
+}
+
 .archive-container .content {
   padding-right: 2em;
 }
@@ -79,4 +107,54 @@ Updated: 2021-01-16 01:12:59
 
 .site-footer > .site-info, .site-footer nav {
   color: var(--global--color-white);
+}
+
+.site-footer, .site-footer a, .site-footer span {
+	color: white;
+}
+
+.site-info {
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.site-info div {
+	flex: 1 100%;
+}
+
+.powered-by {
+	text-align: center;
+}
+
+.archive-description {
+  flex: 1 1 50%;
+  font-size: 1em;
+  padding: 0 5em;
+  line-height: 2em;
+}
+
+.archive-description p {
+  max-width: 80ch;
+  min-width: 40ch;
+}
+
+h1.page-title {
+  padding-left: 0.5em;
+}
+
+.site-footer {
+	margin: 0;
+	max-width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+
+  .tax-tribes header img {
+    display: none;
+  }
+	
+	.archive-description {
+		font-size: 0.8em;
+		padding: 0;
+	}
 }

@@ -20,12 +20,15 @@ $description = get_the_archive_description();
 		<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 		<?php if ( $description ) : ?>
 			<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
+      <?php if( get_terms('tribe_category') ): ?>
+        <h2><?php the_title(); ?></h2>test
+      <?php endif; ?>
 		<?php endif; ?>
 	</header><!-- .page-header -->
 
 <div class="archive-container">
   <div class="article-list">
-    <h2>Articles</h2>
+    <h4>Articles</h4>
     <div class="content">
       <?php while ( have_posts() ) :
         the_post();
@@ -39,7 +42,7 @@ $description = get_the_archive_description();
   </div>
 
   <div class="book-list">
-    <h2>Books</h2>
+    <h4>Books</h4>
     <div class="content">
       <?php while ( have_posts() ) :
         the_post();
