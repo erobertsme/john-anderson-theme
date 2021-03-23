@@ -13,14 +13,18 @@ get_header();
 
 $description = get_the_archive_description();
 ?>
-<script>console.log(<?php echo json_encode( get_field('tribe_image', get_queried_object()) ); ?>)</script>
+
 <?php if ( have_posts() ) : ?>
 
 	<header class="page-header alignwide">
 		<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 		<?php if ( $description ) : ?>
 			<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
-      <img src="<?php echo get_field('tribe_image', get_queried_object()); ?>">
+      
+      <?php if ( get_field('tribe_image', get_queried_object()) ) : ?>
+        <img src="<?php echo get_field('tribe_image', get_queried_object()); ?>">
+      <?php endif; ?>
+
       <?php if ( get_query_var( 'tribe_category' ) ) : ?>
         <h2><?php echo get_term_by( 'slug', get_query_var('tribe_category'), 'tribe_category' )->name; ?></h2>
       <?php endif; ?>
