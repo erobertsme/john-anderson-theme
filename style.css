@@ -42,6 +42,7 @@ Updated: 2021-03-22 01:12:59
 
 .site-header {
   justify-content: center;
+  padding: 0;
 }
 
 .primary-navigation {
